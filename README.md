@@ -4,7 +4,7 @@
 
 ---
 
-# **_FlixTorr fetches the magnets link of trending movies and series!_**
+# **_FlixTorr fetches the magnet links for trending movies and series!_**
 
 # _Made with [React Js](https://reactjs.org/)!_
 
