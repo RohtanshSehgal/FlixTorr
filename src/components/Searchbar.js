@@ -27,7 +27,7 @@ function Search() {
     <div className="search">
       <input
         style={{ color: "white" }}
-        value={state === "FLIXTORR" ? "" : state}
+        value={state === "FlixTorr" ? "" : state}
         required
         onChange={(event) => setstate(event.target.value)}
         type="text"
