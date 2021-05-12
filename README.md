@@ -1,6 +1,10 @@
 <a href="https://rohtanshsehgal.github.io/FlixTorr/"><img src="./src/images/falcon.png" align="left" ></a>
 
-![**FlixTorr**](./src/images/FlixTorr.svg)
+## ![**FlixTorr**](./src/images/FlixTorr.svg)
+
+<br></br>
+
+# **_FlixTorr fetches the magnets link of trending movies and series!_**
 
 # _Made with [React Js](https://reactjs.org/)!_
 
