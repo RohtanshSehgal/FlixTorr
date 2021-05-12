@@ -1,0 +1,78 @@
+.container-torrent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: auto;
+}
+.items-torrent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #171b1f,
+    #1f2020
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #171b1f,
+    #1f2020
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  overflow-wrap: break-word;
+  height: fit-content;
+}
+.items-torrent h4 {
+  max-width: 150px;
+}
+.items-torrent button {
+  text-align: center;
+  background-color: #171b1f;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+.items-torrent button:hover {
+  cursor: pointer;
+}
+.lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head-tor {
+  height: 90px;
+  width: 210px;
+}
+@media (max-width: 620px) {
+  .container-torrent {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+  .item-torrent {
+    margin: 10px;
+  }
+  .lists {
+    display: block;
+  }
+  .head-tor {
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

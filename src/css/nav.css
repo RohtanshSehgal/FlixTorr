@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.appname {
+  font-weight: 300;
+  font-size: xx-large;
+}
+.flix {
+  width: 226px;
+  height: 43px;
+}
+.falcon {
+  height: 80px;
+  width: 80px;
+}
+@media (max-width: 620px) {
+  .navbar {
+    flex-direction: column;
+  }
+}

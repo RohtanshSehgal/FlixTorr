@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item {
+  display: inline-grid;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #171b1f,
+    #1f2020
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #171b1f,
+    #1f2020
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  max-width: max-content;
+  text-align: center;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.item h3 {
+  max-width: 200px;
+}
+
+.item button {
+  border-radius: 13px;
+  max-width: fit-content;
+  border: none;
+  max-height: max-content;
+  background-image: linear-gradient(
+    to top,
+    #323232 -40%,
+    #232323 105%,
+    #232323 105%
+  );
+  align-self: center;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+/* Float Shadow */
+
+.item:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(
+    center,
+    ellipse,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.item:hover,
+.hvr-float-shadow:focus,
+.hvr-float-shadow:active {
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+  /* move the element up by 5px */
+}
+.item:hover:before,
+.hvr-float-shadow:focus:before,
+.hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+.rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  float: right;
+}
+.flexrate {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 620px) {
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+  .item {
+    margin: 10px;
+  }
+}

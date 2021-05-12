@@ -1,0 +1,8 @@
+.head {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
