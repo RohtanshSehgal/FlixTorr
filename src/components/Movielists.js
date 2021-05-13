@@ -13,7 +13,7 @@ function Movielists({ comp, title, desc, poster, id, rating, bg }) {
         <>
           <Link
             style={{ textDecoration: "none", color: "white" }}
-            to={`/torrents/${comp}/${id}/${title}`}
+            to={`/FlixTorr/torrents/${comp}/${id}/${title}`}
           >
             <div className="item">
               <h3>{title}</h3>
@@ -35,7 +35,7 @@ function Movielists({ comp, title, desc, poster, id, rating, bg }) {
                   />
                   <Link
                     style={{ textDecoration: "none", color: "white" }}
-                    to={`/torrents/${comp}/${id}/${title}`}
+                    to={`/FlixTorr/torrents/${comp}/${id}/${title}`}
                   >
                     Fetch Magnets
                   </Link>

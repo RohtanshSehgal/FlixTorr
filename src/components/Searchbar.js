@@ -9,7 +9,7 @@ function Search() {
   const handleOnClick = useCallback(
     (text) => {
       if (text.trim().length > 0) {
-        history.push(`/movies/${text}`);
+        history.push(`/FlixTorr/movies/${text}`);
       } else {
         alert("Please input alphabet characters only");
       }

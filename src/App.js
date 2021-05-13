@@ -17,8 +17,12 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/FlixTorr" exact component={Movies} />
-          <Route path="/torrents/:comp/:id/:title" exact component={Torrent} />
-          <Route path="/movies/:query" exact component={SearchMovie} />
+          <Route
+            path="/FlixTorr/torrents/:comp/:id/:title"
+            exact
+            component={Torrent}
+          />
+          <Route path="/FlixTorr/movies/:query" exact component={SearchMovie} />
         </Switch>
       </Router>
     </>
