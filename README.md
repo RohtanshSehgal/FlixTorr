@@ -28,7 +28,7 @@
 
 ## **Credits**
 
-- FlixTorr text logo made by [@SakshamSingh-v2](https://github.comSakshamSingh-v2)
+- FlixTorr text logo made by [@SakshamSingh-v2](https://github.com/SakshamSingh-v2)
 
 - Other Icons from [Flaticon](https://www.flaticon.com/) and [Icons8](https://icons8.com/)
 
