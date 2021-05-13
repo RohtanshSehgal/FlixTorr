@@ -8,7 +8,7 @@ import Nav from "./components/nav";
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize("");
+    ReactGA.initialize("G-BQCF60S5JC");
     ReactGA.pageview(window.location.pathname);
   }, []);
   return (
