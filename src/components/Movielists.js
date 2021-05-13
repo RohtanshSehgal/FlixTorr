@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Movies.css";
+import star from "../images/Star.svg";
 import magnet from "../images/Magnet.svg";
 
 function Movielists({ comp, title, desc, poster, id, rating, bg }) {
@@ -9,40 +10,53 @@ function Movielists({ comp, title, desc, poster, id, rating, bg }) {
       {!rating || poster === null || bg === null ? (
         ""
       ) : (
-        <div className="item">
-          <h3>{title}</h3>
-          <img
-            style={{
-              height: "300px",
-              width: "200px",
-              padding: "10px",
-            }}
-            src={poster}
-            alt=""
-          />
-          <div className="rate">
-            <button>
+        <>
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to={`/torrents/${comp}/${id}/${title}`}
+          >
+            <div className="item">
+              <h3>{title}</h3>
               <img
-                style={{ height: "45px", width: "45px", padding: "5px" }}
-                src={magnet}
+                style={{
+                  height: "300px",
+                  width: "200px",
+                  padding: "10px",
+                }}
+                src={poster}
                 alt=""
               />
-              <Link
-                style={{ textDecoration: "none", color: "white" }}
-                to={`/torrents/${comp}/${id}/${title}`}
-              >
-                Fetch Magnets
-              </Link>
-            </button>
-            <div className="flexrate">
-              <img
-                src="https://img.icons8.com/fluent/18/000000/rating-circled.png"
-                alt=""
-              />
-              <em>{rating}</em>
+              <div className="rate">
+                <button style={{ paddingRight: "10px" }}>
+                  <img
+                    style={{ height: "45px", width: "45px", padding: "8px" }}
+                    src={magnet}
+                    alt=""
+                  />
+                  <Link
+                    style={{ textDecoration: "none", color: "white" }}
+                    to={`/torrents/${comp}/${id}/${title}`}
+                  >
+                    Fetch Magnets
+                  </Link>
+                </button>
+                <div className="flexrate">
+                  <img
+                    src={star}
+                    style={{
+                      height: "18px",
+                      width: "18px",
+                      padding: "1px",
+                      marginBottom: "4px",
+                    }}
+                    alt=""
+                  />
+                  <em>{rating}</em>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </Link>
+        </>
       )}
     </>
   );
