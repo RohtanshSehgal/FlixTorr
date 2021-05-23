@@ -1,7 +1,7 @@
 import React from "react";
 import fast from "../images/Fast.svg";
 import slow from "../images/Slow.svg";
-function Torrentlist({ magnet, size, site, type, name, title, trusted, nsfw }) {
+function Torrentlist({ magnet, size, site, type, name, trusted }) {
   return (
     <div className="item">
       {trusted ? (
