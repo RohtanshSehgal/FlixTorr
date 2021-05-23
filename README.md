@@ -6,7 +6,7 @@
 
 # _Made with [React Js](https://reactjs.org/)!_
 
-# _[Visit Website](https://rohtanshsehgal.github.io/FlixTorr/)_
+# _[Visit Website](https://flixtorr.web.app/)_
 
 ## **General Use**
 
@@ -20,15 +20,13 @@
 
 - The Movie Database API
 
-- TV Maze
-
 - [@cyberboysumanjay](https://github.com/cyberboysumanjay) Torrent Search API
 
 ---
 
 ## **Credits**
 
-- FlixTorr text logo made by [@SakshamSingh-v2](https://github.comSakshamSingh-v2)
+- FlixTorr text logo made by [@SakshamSingh-v2](https://github.com/SakshamSingh-v2)
 
 - Other Icons from [Flaticon](https://www.flaticon.com/) and [Icons8](https://icons8.com/)
 
