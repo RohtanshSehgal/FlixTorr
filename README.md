@@ -20,8 +20,6 @@
 
 - The Movie Database API
 
-- TV Maze
-
 - [@cyberboysumanjay](https://github.com/cyberboysumanjay) Torrent Search API
 
 ---
