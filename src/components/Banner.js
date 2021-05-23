@@ -8,7 +8,7 @@ function Banner({ match }) {
   const image = "https://image.tmdb.org/t/p/w1280";
   const image2 = "https://image.tmdb.org/t/p/original";
   const [info, setinfo] = useState({});
-  const API_KEY = "e223219a33cbe1d2134dd191301292bd";
+  const API_KEY = "";
   const url = `/${match.params?.type}/${match.params?.id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`;
   const url2 = `https://api.themoviedb.org/3/${match.params?.type}/${match.params?.id}?api_key=${API_KEY}&language=en-US`;
   useEffect(() => {

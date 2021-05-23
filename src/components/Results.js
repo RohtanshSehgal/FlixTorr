@@ -4,7 +4,7 @@ import Row from "./Row";
 import Torrent from "./Torrent";
 import requests from "../requests";
 function Results({ match }) {
-  const url1 = `/search/multi?api_key=e223219a33cbe1d2134dd191301292bd&language=en-US&page=1&include_adult=false&query=${match.params.query}`;
+  const url1 = `/search/multi?api_key="apikey"&language=en-US&page=1&include_adult=false&query=${match.params.query}`;
   return (
     <div className="results">
       <Row

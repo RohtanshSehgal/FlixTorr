@@ -1,4 +1,4 @@
-const API_KEY = "e223219a33cbe1d2134dd191301292bd";
+const API_KEY = "";
 
 const requests = {
   movies: {
