@@ -1,4 +1,4 @@
-<a href="https://rohtanshsehgal.github.io/FlixTorr/"><img src="./src/images/falcon.png" align="left" ></a>
+<a href="https://rohtanshsehgal.github.io/FlixTorr/"><img src="./src/images/falconnew.png" align="left" ></a>
 
 ## ![**FlixTorr**](./src/images/FlixTorr.svg)
 
