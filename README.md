@@ -6,7 +6,7 @@
 
 # _Made with [React Js](https://reactjs.org/)!_
 
-# _[Visit Website](https://rohtanshsehgal.github.io/FlixTorr/)_
+# _[Visit Website](https://flixtorr.web.app/)_
 
 ## **General Use**
 
