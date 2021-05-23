@@ -10,8 +10,15 @@ function ErrorDisplay({ comp }) {
           style={{ height: "30px", width: "30px", padding: "4px" }}
           alt=""
         />
-        <em>Ahh! my bad i cant find {comp} that you've serached for ಠ╭╮ಠ </em>
+        <em>Ahh! my bad i cant find {comp} that you've serached for ಠ╭╮ಠ</em>
       </div>
+      {comp === "torrents" ? (
+        <div className="insideErr">
+          <em>Try Reloading the page 3-4 times.</em>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

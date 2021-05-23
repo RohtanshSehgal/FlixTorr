@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+.row_posters {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.row_posters img {
+  height: 300px;
+  width: 200px;
+  padding: 10px;
+
+  transition: transform 0.2s;
+}
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+.row::-webkit-scrollbar {
+  display: none;
+}
+.row_posters img:hover {
+  transform: scale(1.1);
+}
+.row {
+  font-family: "Poppins", sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}

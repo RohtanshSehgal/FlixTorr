@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import "../css/search.css";
-import searchbutton from "../images/SearchButton.svg";
+import searchbutton from "../images/search.png";
 function Search() {
   const [state, setstate] = useState("");
   const history = useHistory();
@@ -9,7 +9,7 @@ function Search() {
   const handleOnClick = useCallback(
     (text) => {
       if (text.trim().length > 0) {
-        history.push(`/FlixTorr/movies/${text}`);
+        history.push(`/results/${text}`);
       } else {
         alert("Please input alphabet characters only");
       }
@@ -27,7 +27,7 @@ function Search() {
     <div className="search">
       <input
         style={{ color: "white" }}
-        value={state === "FlixTorr" ? "" : state}
+        value={state}
         required
         onChange={(event) => setstate(event.target.value)}
         type="text"
@@ -40,7 +40,7 @@ function Search() {
       ></input>{" "}
       <button onClick={() => handleOnClick(state)}>
         <img
-          alt="Freepik"
+          alt=""
           src={searchbutton}
           style={{ height: "35px", width: "35px" }}
         />

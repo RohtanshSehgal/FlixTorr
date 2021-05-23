@@ -1,19 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./css/index.css";
-import App from "./App";
-import Loading from "./Loading";
-import reportWebVitals from "./reportWebVitals";
+import Landing from "./Landing";
+import Nav from "./components/nav";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Banner from "./components/Banner";
+import Results from "./components/Results";
+import Footer from "./components/Footer";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <Loading />
+    <Router>
+      <Nav />
+      <Switch>
+        <Route path="/" exact component={Landing} />
+        <Route path="/torrent/:id/:type/:title" exact component={Banner} />
+        <Route path="/results/:query" exact component={Results} />
+      </Switch>
+    </Router>
+    <Footer />
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

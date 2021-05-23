@@ -1,63 +1,90 @@
-import { useEffect, useState } from "react";
-import React from "react";
-import Torrentlist from "./Torrentlist";
-import Details from "./details";
-import "../css/Torrent.css";
-import { trackPromise } from "react-promise-tracker";
-import torrent from "../images/Torrent.svg";
+import React, { useEffect, useState } from "react";
+import "../css/torrent.css";
 import ErrorDisplay from "./ErrorDisplay";
+import Torrentlist from "./TorrentList";
 
-function Torrent({ match }) {
-  const torr = `https://api.sumanjay.cf/torrent/?query=${(
-    match.params.title + ""
-  ).replace(/[^a-zA-Z ]/g, "")}`;
-  const [mag, setMag] = useState([]);
+function Torrent({ query, comp }) {
+  const torr = `https://api.sumanjay.cf/torrent/?query=${(query + "").replace(
+    /[^a-zA-Z ]/g,
+    ""
+  )}`;
+
+  const [results, setResults] = useState([]);
   const [check, setcheck] = useState(false);
+  const [load, setLoad] = useState(true);
   useEffect(() => {
-    trackPromise(
-      fetch(torr).then((data) => {
-        data.text().then((data) => {
-          if (data === "Error") {
-            setcheck(true);
-          }
+    setResults([]);
+    setcheck(false);
+    setLoad(true);
+    fetch(torr).then((data) => {
+      data.text().then((data) => {
+        if (data === "Error" || data === "null") {
+          setcheck(true);
+          setLoad(false);
+          setResults([]);
+        } else {
           const resp = JSON.parse(data);
-          setMag(resp);
-        });
-      })
-    );
-  }, [torr, match.params.title]);
-  return (
-    <div className="lists">
-      <Details
-        title={match.params.title}
-        id={match.params.id}
-        comp={match.params.comp}
-      />
-      <img className="head-tor" src={torrent} alt="" />
-      {check ? <ErrorDisplay comp="torrents" /> : ""}
-      <div className="container-torrent">
-        {mag.map((mag) => {
-          if (
-            mag.type.indexOf("Movies") !== -1 ||
-            mag.type.indexOf("TV") !== -1
-          ) {
-            return (
-              <Torrentlist
-                key={mag.magnet}
-                magnet={mag.magnet}
-                size={mag.size}
-                site={mag.site}
-                type={mag.type}
-                name={mag.name}
-                title={match.params.title}
-                trusted={mag.trusted}
-                nsfw={mag.nsfw}
-                id={match.params.id}
-              />
-            );
+          if (resp.status === false) {
+            setcheck(true);
+            setLoad(false);
+            setResults([]);
+          } else {
+            setResults(resp);
+            setLoad(false);
+            setcheck(false);
           }
-          return "";
-        })}
+        }
+      });
+    });
+  }, [torr]);
+
+  return (
+    <div className="torrentcontainer">
+      <h1 style={{ marginLeft: "22px" }}>TORRENTS</h1>
+      {check ? <ErrorDisplay comp="torrents" /> : ""}
+
+      <div className="items">
+        {load ? (
+          <div
+            className="shimmer"
+            style={{
+              width: "100%",
+              margin: "10px",
+              height: "200px",
+            }}
+          ></div>
+        ) : (
+          ""
+        )}
+
+        {results.length !== 0
+          ? results?.map((result) => {
+              if (
+                result.type.indexOf("Movies") !== -1 ||
+                result.type.indexOf("TV") !== -1
+              ) {
+                return (
+                  <li key={result?.magnet}>
+                    {result?.nsfw ? (
+                      ""
+                    ) : (
+                      <Torrentlist
+                        key={result?.magnet}
+                        name={result?.name}
+                        site={result?.site}
+                        size={result?.size}
+                        type={result?.type}
+                        magnet={result?.magnet}
+                        trusted={result?.trusted}
+                        nsfw={result?.nsfw}
+                      />
+                    )}
+                  </li>
+                );
+              }
+              return void 0;
+            })
+          : ""}
       </div>
     </div>
   );

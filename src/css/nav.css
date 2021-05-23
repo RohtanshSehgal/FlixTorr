@@ -3,7 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 15px;
+  background-color: transparent;
 }
 .logo {
   display: flex;
@@ -17,6 +18,7 @@
 .flix {
   width: 226px;
   height: 43px;
+  margin: 0 10px;
 }
 .falcon {
   height: 80px;
@@ -25,5 +27,18 @@
 @media (max-width: 620px) {
   .navbar {
     flex-direction: column;
+  }
+}
+@media (max-width: 345px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .flix {
+    width: 190px;
+    height: 43px;
+  }
+  .falcon {
+    height: 60px;
+    width: 60px;
   }
 }

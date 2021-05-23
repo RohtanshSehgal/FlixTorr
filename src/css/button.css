@@ -1,0 +1,14 @@
+.btn {
+  text-decoration: none;
+  border: 1px solid rgb(117, 30, 30);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(247, 30, 30, 0.4);
+}
+
+.btn:hover:before {
+  left: 100%;
+}

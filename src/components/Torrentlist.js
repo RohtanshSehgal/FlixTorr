@@ -1,19 +1,9 @@
 import React from "react";
 import fast from "../images/Fast.svg";
 import slow from "../images/Slow.svg";
-function Torrentlist({
-  magnet,
-  size,
-  site,
-  type,
-  name,
-  title,
-  trusted,
-  nsfw,
-  id,
-}) {
+function Torrentlist({ magnet, size, site, type, name, title, trusted, nsfw }) {
   return (
-    <div className="items-torrent">
+    <div className="item">
       {trusted ? (
         <img
           src={fast}
@@ -27,18 +17,28 @@ function Torrentlist({
           alt=""
         />
       )}
-      <h4>{name}</h4>
-      <h5>{size}</h5>
-      <h5>Website: {site}</h5>
-      <h5>{type}</h5>
-      <button
-        onClick={() => {
-          navigator.clipboard.writeText(magnet);
-          alert(`${name} Link Copied to Clipboard`);
-        }}
-      >
-        Copy Link!
-      </button>
+      <div className="child">
+        <h4>{name}</h4>
+        <h5>Website: {site}</h5>
+        <h5>Size: {size}</h5>
+        <h6>Type: {type}</h6>
+        <button
+          style={{
+            fontSize: "1rem",
+            padding: "0.5rem 0.5rem",
+            marginTop: "5px",
+            color: "#f4f4f4",
+            backgroundColor: "transparent",
+          }}
+          className="btn"
+          onClick={() => {
+            navigator.clipboard.writeText(magnet);
+            alert(`${name} Link Copied to Clipboard`);
+          }}
+        >
+          Copy Link!
+        </button>
+      </div>
     </div>
   );
 }

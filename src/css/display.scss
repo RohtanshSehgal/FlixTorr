@@ -2,37 +2,36 @@
 
 .movie_card {
   display: inline-block;
-  width: 1000px;
-  height: 350px;
-  margin: 25px 0px;
+  width: 100%;
+  height: max-content;
+  margin: 0px 0px;
   overflow: hidden;
-  border-radius: 10px;
+  // border-radius: 10px;
   transition: all 0.4s;
   font-family: "Montserrat", helvetica, arial, sans-serif;
   // font-size: 13px;
   font-weight: 400;
-  &:hover {
-    transform: scale(1.02);
-    transition: all 0.4s;
-  }
+
   .info_section {
     position: relative;
     width: 100%;
     height: 100%;
     background-blend-mode: multiply;
     z-index: 2;
-    border-radius: 10px;
+    // border-radius: 10px;
     .movie_header {
       position: relative;
-      padding: 25px;
+      padding: 20px;
+      border-radius: 10px;
       height: 40%;
+
       h1 {
         color: #fff;
         font-weight: 400;
         font-size: x-large;
       }
       h4 {
-        color: #9ac7fa;
+        color: #fa5454;
         font-weight: 400;
       }
       .minutes {
@@ -53,7 +52,7 @@
         position: relative;
         float: left;
         margin-right: 20px;
-        height: 120px;
+        height: 180px;
         box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
       }
     }
@@ -134,7 +133,7 @@
 
   .movie_header {
     width: 100%;
-    margin-top: 85px;
+    margin-top: 25px;
   }
 
   .movie_desc {
@@ -147,9 +146,9 @@
   }
 }
 
-// #bright {
-//   // box-shadow: 0px 0px 150px -45px rgb(161, 85, 13);
-//   &:hover {
-//     box-shadow: 0px 0px 120px -55px rgb(173, 30, 30);
-//   }
-// }
+#bright {
+  box-shadow: 0px 0px 160px -55px rgb(100, 7, 7);
+  &:hover {
+    box-shadow: 0px 0px 150px -45px rgb(131, 6, 6);
+  }
+}
