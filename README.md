@@ -6,6 +6,8 @@
 
 # _**[Visit Website](https://flixtorr.web.app/)**_
 
+## ![**FlixTorr UI**](./src/images/Final.jpg)
+
 ## **General Use**
 
 - Fetch Magnet links of Trending movies and series !
