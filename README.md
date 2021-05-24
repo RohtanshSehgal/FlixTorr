@@ -24,12 +24,5 @@
 
 ---
 
-## **Credits**
-
-- FlixTorr text logo made by [@SakshamSingh-v2](https://github.com/SakshamSingh-v2)
-
-- Other Icons from [Flaticon](https://www.flaticon.com/) and [Icons8](https://icons8.com/)
-
----
 
 _Note: this app is fully dependent on apis that i have not created, there can be some movie and series torrents which you might not find._
