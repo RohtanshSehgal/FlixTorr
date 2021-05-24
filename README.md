@@ -4,7 +4,7 @@
 
 # **_FlixTorr fetches the magnets link of trending movies and series!_**
 
-# _[Visit Website](https://flixtorr.web.app/)_
+# _**[Visit Website](https://flixtorr.web.app/)**_
 
 ## **General Use**
 
