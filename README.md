@@ -4,8 +4,6 @@
 
 # **_FlixTorr fetches the magnets link of trending movies and series!_**
 
-# _Made with [React Js](https://reactjs.org/)!_
-
 # _[Visit Website](https://flixtorr.web.app/)_
 
 ## **General Use**
@@ -24,12 +22,6 @@
 
 ---
 
-## **Credits**
+_Note: this web app is fully dependent on apis that i have not created, there can be some movie and series torrents which you might not find._
 
-- FlixTorr text logo made by [@SakshamSingh-v2](https://github.com/SakshamSingh-v2)
-
-- Other Icons from [Flaticon](https://www.flaticon.com/) and [Icons8](https://icons8.com/)
-
----
-
-_Note: this app is fully dependent on apis that i have not created, there can be some movie and series torrents which you might not find._
+## Made with [React Js](https://reactjs.org/)!
