@@ -13,11 +13,7 @@ function Expand() {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.netflix.Link);
-      setMovie(
-        request.data.results[
-          Math.floor(Math.random() * request.data.results.length - 2)
-        ]
-      );
+      setMovie(request.data.results[0]);
 
       return request;
     }
