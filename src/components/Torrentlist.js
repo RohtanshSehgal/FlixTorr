@@ -2,6 +2,15 @@ import React from "react";
 import fast from "../images/Fast.svg";
 import slow from "../images/Slow.svg";
 function Torrentlist({ magnet, size, site, type, name, trusted }) {
+  function copyToClipboard(link) {
+    var textField = document.createElement("textarea");
+    textField.innerText = link;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
+  }
+
   return (
     <div className="item">
       {trusted ? (
@@ -32,7 +41,7 @@ function Torrentlist({ magnet, size, site, type, name, trusted }) {
           }}
           className="btn"
           onClick={() => {
-            navigator.clipboard.writeText(magnet);
+            copyToClipboard(magnet);
             alert(`${name} Link Copied to Clipboard`);
           }}
         >
