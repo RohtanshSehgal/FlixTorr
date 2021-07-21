@@ -20,10 +20,6 @@
 
 - The Movie Database API
 
-- [@cyberboysumanjay](https://github.com/cyberboysumanjay) Torrent Search API
-
----
-
-_Note: this web app is fully dependent on apis that i have not created, there can be some movie and series torrents which you might not find._
+- TorrentO API for fetching Torrents.(Source code will be available soon!)
 
 ## Made with [React Js](https://reactjs.org/)!
