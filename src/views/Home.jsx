@@ -1,16 +1,20 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import Banner from "../components/Banner/Banner";
 import Row from "../components/Row/Row";
 import MoviesRoutes from "../services/Movies";
 import useFetchAllDetails from "../hooks/useFetchAllDetails";
 import TvRoutes from "../services/Tv";
 import Tab from "../components/Tab/Tab";
-
+import axios from "axios";
 function Home() {
   const parentRef = useRef(null);
   const data = useFetchAllDetails({
     fetchUrl: MoviesRoutes.home.banner.path,
   });
+  useEffect(() => {
+    axios.get("https://torrvia.herokuapp.com/");
+  }, []);
+
   return (
     <div>
       {Object.keys(data).length !== 0 ? (
