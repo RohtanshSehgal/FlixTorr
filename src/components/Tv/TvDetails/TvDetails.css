@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;300&family=Teko:wght@300;400&display=swap");
+
+.tvdetail {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: max-content;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  color: white;
+  padding: 3vh;
+  box-shadow: 10px 20px 160px -55px rgb(100, 7, 7);
+  margin-bottom: 15px;
+  padding-bottom: 8vh;
+}
+.tvdetail:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgb(14, 1, 1) 40%,
+    rgba(22, 2, 32, 0) 80%
+  );
+  background-blend-mode: multiply;
+  will-change: transform;
+  z-index: 0;
+  color: white;
+}
+.tvdetail h1 {
+  position: relative;
+  z-index: 10;
+  font-size: 12.5vh;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+}
+.tvdetail p {
+  position: relative;
+  z-index: 10;
+  font-size: 2.5vh;
+  width: 68%;
+  margin-top: 10px;
+}
+.tvdetail h2 {
+  position: relative;
+  color: white;
+  z-index: 10;
+  color: red;
+  font-size: 3.5vh;
+}
+.tvdetail h3 {
+  position: relative;
+  color: #cccccc;
+  z-index: 10;
+  margin-top: 4px;
+  font-size: 3vh;
+}
+.tvdetail h4 {
+  position: relative;
+  color: #e6e6e6;
+  z-index: 10;
+  margin-top: 4px;
+  font-size: 3vh;
+}
+.tvdetail span {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 5px;
+}
+.tvdetail h6 {
+  color: #f03336;
+  font-size: large;
+  margin-right: 5px;
+}
+.tvdetail img {
+  height: 35px;
+  width: 35px;
+}
+#poster {
+  margin-top: 5px;
+  height: 300px;
+  width: 200px;
+  z-index: 10;
+}
+.tvdetail-content {
+  z-index: 10;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+.tvdetail button a {
+  text-decoration: none;
+  color: white;
+}
+.tvdetail .watch {
+  display: block;
+  border: 1px solid #751e1e;
+  border-radius: 4px;
+  position: relative;
+  z-index: 10;
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 160px -55px rgb(100, 7, 7);
+  outline: none;
+  transition: all 0.2s;
+}
+.tvdetail button:hover {
+  color: white;
+  box-shadow: 0 0 30px #6d0b0b;
+}
+.tvdetail button:active {
+  transform: translateY(2px);
+}
+
+@media (max-width: 1300px) {
+  .tvdetail h1 {
+    font-size: 8vh;
+  }
+  .tvdetail p {
+    font-size: 1rem;
+  }
+  .tvdetail h2 {
+    font-size: 2.7vh;
+  }
+  .tvdetail h3 {
+    font-size: 2.2vh;
+  }
+  .tvdetail {
+    height: max-content;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1100px) {
+  .tvdetail h1 {
+    font-size: 6vh;
+  }
+  .tvdetail p {
+    font-size: 1rem;
+  }
+  .tvdetail {
+    height: max-content;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 850px) {
+  .tvdetail h2 {
+    font-size: 3vh;
+  }
+  .tvdetail p {
+    font-size: 1rem;
+    width: 60%;
+  }
+  .tvdetail h4 {
+    font-size: 2.5vh;
+  }
+  .tvdetail h6 {
+    font-size: large;
+  }
+  .tvdetail {
+    height: max-content;
+    margin-bottom: 15px;
+  }
+  .tvdetail .watch {
+    margin: 10px 0px;
+  }
+}
+@media (max-width: 690px) {
+  .tvdetail p {
+    font-size: medium;
+  }
+  .tvdetail h1 {
+    font-size: 5vh;
+  }
+  .tvdetail h4 {
+    font-size: 1.5vh;
+  }
+  .tvdetail h6 {
+    font-size: medium;
+  }
+  .tvdetail h2 {
+    font-size: 2.5vh;
+  }
+  .tvdetail h3 {
+    font-size: large;
+  }
+  .tvdetail .watch {
+    margin: 10px 0px;
+  }
+}
+@media (max-width: 500px) {
+  .tvdetail h1 {
+    font-size: 3vh;
+  }
+  .tvdetail h2 {
+    font-size: 1.5vh;
+  }
+  .tvdetail h3 {
+    font-size: 1vh;
+  }
+  .tvdetail h4 {
+    font-size: 1.2vh;
+  }
+  .tvdetail h6 {
+    font-size: 1vh;
+  }
+  .tvdetail p {
+    font-size: 1vh;
+  }
+  .tvdetail img {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .tvdetail h1 {
+    font-size: 3vh;
+  }
+  .tvdetail h2 {
+    font-size: 1.2vh;
+  }
+  .tvdetail h3 {
+    font-size: 1vh;
+  }
+  .tvdetail h4 {
+    font-size: 1.5vh;
+  }
+  .tvdetail h6 {
+    font-size: 1vh;
+  }
+  .tvdetail p {
+    font-size: 1.2vh;
+  }
+  .tvdetail img {
+    height: 15px;
+    width: 15px;
+  }
+}

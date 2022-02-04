@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-color: transparent;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.appname {
+  font-weight: 300;
+  font-size: xx-large;
+}
+.flix {
+  width: 180px;
+  height: 43px;
+  margin: 0 10px;
+}
+.falcon {
+  height: 70px;
+  width: 70px;
+}
+@media (max-width: 620px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+@media (max-width: 345px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .flix {
+    width: 190px;
+    height: 43px;
+  }
+  .falcon {
+    height: 60px;
+    width: 60px;
+  }
+}
